@@ -16,7 +16,7 @@ public class TodoRowMapper implements RowMapper<Todo> {
         Todo todo = new Todo();
         todo.setId( rs.getInt("id"));
         todo.setTitle( rs.getString("title"));
-        todo.setContent( rs.getString("content"));
+        todo.setDescription( rs.getString("content"));
         todo.setStatus( rs.getString("status"));
         try {
             todo.setAddedDate(Helper.parseDate((LocalDateTime) rs.getObject("addedDate")));
